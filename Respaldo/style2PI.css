@@ -1,0 +1,751 @@
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+@font-face {
+    font-family: 'MouseMemoirs';
+    src: url('./MouseMemoirs/MouseMemoirs-Regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    border: 5px solid #ff6550;
+    overflow-x: clip;
+    background: #fffaf7;
+    font-family: sans-serif;
+}
+
+
+/* =========================================================
+   NAVBAR PRINCIPAL
+========================================================= */
+
+#navbar{
+    padding: 10px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background-color: rgb(255, 36, 160);
+}
+
+#navbar a{
+    padding: 10px 20px;
+
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+#navbar a:hover{
+    transform: scale(1.1);
+}
+
+#navbar a:nth-child(1){
+    background-color: #ff6b6b;
+}
+
+#navbar a:nth-child(2){
+    background-color: #4ecdc4;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    position: fixed;
+
+    top: 10px;
+    left: 20px;
+
+    width: 50px;
+    height: auto;
+
+    z-index: 2000;
+}
+
+
+/* =========================================================
+   HERO / CARRUSEL
+========================================================= */
+
+.hero{
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.hero .carousel{
+    position: relative;
+
+    width: 100%;
+    height: 60vh;
+    max-height: 500px;
+
+    overflow: hidden;
+}
+
+.hero .carousel img{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+.hero .carousel img.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   NAVBAR SECUNDARIO
+========================================================= */
+
+#navbar2{
+    margin-top: 80px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#navbar2 a{
+    padding: 10px 20px;
+
+    text-decoration: none;
+    color: white;
+
+    border-radius: 10px;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+#navbar2 a:hover{
+    transform: scale(1.1);
+}
+
+#navbar2 a:nth-child(1){
+    background-color: #F4B200;
+}
+
+#navbar2 a:nth-child(2){
+    background-color: #0066C7;
+}
+
+#navbar2 a:nth-child(3){
+    background-color: #E0388A;
+}
+
+#navbar2 a:nth-child(4){
+    background-color: #10b998;
+}
+
+#navbar2 a:nth-child(5){
+    background-color: #79386E;
+}
+
+
+/* =========================================================
+   TITULOS GENERALES
+========================================================= */
+
+h1{
+    margin: 40px 0 20px;
+    text-align: center;
+    font-family: 'MouseMemoirs';
+    font-size: 45px;
+    color: #000000;
+}
+
+h2{
+
+    font-family: 'MouseMemoirs';
+    font-size: 45px;
+    margin-left: 60px;
+}
+#musica h2{
+    color: #F4B200;
+}
+#cultura h2{
+    color: #0066C7;
+}
+#arte h2{
+    color: #E0388A;
+}
+#cine h2{
+    color: #10b998;
+}
+#social h2{
+    color: #79386E;
+}
+
+
+h3{
+    margin: 10px 0 5px;
+}
+
+p{
+    color: #555555;
+}
+
+
+/* =========================================================
+   TOP EVENTOS
+========================================================= */
+
+.galeria1{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.galeria1 .card1{
+    text-align: center;
+}
+
+.galeria1 .card1 img{
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.galeria1 .card1 h3{
+    margin-top: 10px;
+}
+
+
+
+/* =========================================================
+   SECCION
+========================================================= */
+
+#musica,
+#cultura,
+#arte,
+#cine,
+#social {
+
+    padding: 40px 20px;
+
+    scroll-margin-top: 30px;
+}
+
+#musica, #cultura, #arte, #cine, #social h2{
+    margin-bottom: 10px;
+}
+
+#musica, #cultura, #arte, #cine, #social p{
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   CONTENEDOR CARRUSEL
+========================================================= */
+
+.contenedor-carrusel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 60px;
+}
+
+
+/* =========================================================
+   GALERIAS
+========================================================= */
+
+.galeria2{
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    width: 100%;
+    padding: 10px 0;
+}
+
+.galeria2::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card2{
+    position: relative;
+    z-index: 1;
+
+    flex: 0 0 170px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   IMAGENES
+========================================================= */
+
+.card2 img{
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   TITULOS CARDS
+========================================================= */
+
+.card2 h3{
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   FLECHAS
+========================================================= */
+
+.flecha{
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.45);
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.flecha:hover{
+    transform: translateY(-50%) scale(1.1);
+
+    background: rgba(255,255,255,0.6);
+    color: black;
+}
+
+.izquierda{
+    left: 10px;
+}
+
+.derecha{
+    right: 10px;
+}
+
+
+
+/* =========================================================
+   ELEMENTO STATIC
+========================================================= */
+
+.static{
+    width: 150px;
+    height: 90px;
+
+    position: static;
+
+    background-color: rgb(151, 96, 147);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MENU DESPLEGABLE
+========================================================= */
+
+.dropdown{
+    position: fixed;
+
+    top: 10px;
+    right: 10px;
+
+    z-index: 9999;
+font-family: Arial;
+}
+
+.dropdown .dropbtn{
+    background-color: #1193A2;
+    color: white;
+
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: background 0.3s ease;
+}
+
+.dropdown .dropbtn:hover{
+    background-color: #08454c;
+}
+
+.dropdown .dropdown-content{
+    position: absolute;
+
+    right: 0;
+
+    margin-top: 8px;
+    min-width: 200px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+}
+
+.dropdown .dropdown-content a{
+    display: block;
+
+    padding: 12px;
+
+    color: black;
+
+    text-decoration: none;
+
+    transition: background 0.3s;
+}
+
+.dropdown .dropdown-content a:hover{
+    background-color: #f2f2f2;
+}
+
+.dropdown.active .dropdown-content{
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+
+
+/* ===== PARTE 7: CONTACTO ===== */
+
+.contacto-fondo{
+    width: 100%;
+    background-color: #FCE9D6;
+    padding: 50px;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+
+.contacto-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+
+.contacto-info{
+    width: 60%;
+}
+
+.contacto-info .titulo-info{
+    font-family: 'MouseMemoirs';
+    font-size: 40px;
+    color: #79386E;
+    margin-bottom: 20px;
+    line-height: 0.8;
+}
+
+
+.contacto-info p{
+    text-align: justify;
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+.contacto{
+    width: 20%;
+}
+
+.contacto .contenido{
+    width: 100%;
+}
+
+.contacto .titulo {
+    font-family: 'MouseMemoirs';
+    font-size: 40px;
+    color: #79386E;
+    border: none;
+}
+
+.contacto .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    text-align: justify;
+    font-size: 25px;
+    line-height: 0.7;
+}
+
+.contacto .item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.contacto-info .dato-contacto{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+.contacto-info .dato-contacto img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.contacto-info .dato-contacto p{
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/* =========================================================
+   RESPONSIVE PC
+   1024px → Laptop / PC pequeña
+========================================================= */
+
+@media (max-width: 1024px){
+
+    #navbar{
+        gap: 10px;
+    }
+
+    h1,
+    h2{
+        font-size: 38px;
+    }
+
+    .hero .carousel{
+        height: 50vh;
+    }
+
+    .contacto-contenedor{
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+   768px → Tablet
+========================================================= */
+
+@media (max-width: 768px){
+
+    #navbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #navbar2{
+        flex-wrap: wrap;
+    }
+
+    .hero .carousel{
+        height: 40vh;
+    }
+
+    h1,
+    h2{
+        font-size: 32px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .galeria1{
+        grid-template-columns: 1fr;
+    }
+
+
+    .contacto-contenedor{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contacto-info,
+    .contacto{
+        width: 100%;
+    }
+
+    .contacto-info p,
+    .contacto .item{
+        font-size: 20px;
+        line-height: 1.4;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .contacto .item img,
+    .contacto-info .dato-contacto img{
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+    }
+
+    .logo{
+        width: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE CELULAR
+   480px → Smartphone
+========================================================= */
+
+@media (max-width: 480px){
+
+    #navbar a,
+    #navbar2 a{
+        width: 100%;
+        text-align: center;
+    }
+
+    h1,
+    h2{
+        font-size: 26px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .hero .carousel{
+        height: 30vh;
+    }
+
+    .galeria1 .card1 img,
+    .card2 img{
+        height: 180px;
+    }
+
+    .contacto-fondo{
+        padding: 25px;
+    }
+
+    .contacto-info .titulo-info,
+    .contacto .titulo{
+        font-size: 28px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .contacto-info p,
+    .contacto .item,
+    .contacto-info .dato-contacto p{
+        font-size: 18px;
+    }
+
+    .dropdown{
+        top: 5px;
+        right: 5px;
+    }
+
+    .dropdown .dropbtn{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .logo{
+        width: 30px;
+    }
+
+}
